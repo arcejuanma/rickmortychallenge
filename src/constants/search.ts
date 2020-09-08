@@ -1,0 +1,1 @@
+export const resultsPerPage:number = 15

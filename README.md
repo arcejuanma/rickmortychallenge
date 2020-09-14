@@ -37,6 +37,12 @@ On the first version, this MVP includes the ability to:
 * UX Improvements (Show/Hide filters on Mobile).
 * Track and Fix performance issues.
 
+### `Structure`
+* Components --> Includes all the components and their corresponding file for styling.
+* Constats --> Includes constants used all over the code (Display, etc).
+* Redux --> Store + Search Duck and Types.
+* Utils --> Helper Functions and Queries
+
 ### `Screens:`
 
 #### Home Screen:

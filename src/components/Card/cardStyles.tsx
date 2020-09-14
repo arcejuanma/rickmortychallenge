@@ -14,8 +14,6 @@ export const Card = styled.div`
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
-  @media ${device.tablet} {
-  }
 
 `;
 

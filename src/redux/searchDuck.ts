@@ -172,7 +172,7 @@ export const fetchSearchCharactersAction = (
     }
     catch (error) {
         if (getState().search.searchTerm === searchTerm) {
-            dispatch(setLocationsError(handleGraphQLError(error, "Characters")))
+            dispatch(setCharacterError(handleGraphQLError(error, "Characters")))
         }
     }
 }
@@ -250,6 +250,8 @@ export const fetchSearchLocationsAction = (
         }
     }
 }
+
+
 export const setSearchLocationsAction = (locationsResults): SearchActionTypes => {
     return {
         type: LOCATIONS_RESULTS_SUCCESS,

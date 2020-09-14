@@ -20,6 +20,10 @@ export const ModalContent = styled.div`
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    @media ${device.tablet} {
+        max-width: 60%;
+
+  }
 `
 
 export const CloseButton = styled.span`

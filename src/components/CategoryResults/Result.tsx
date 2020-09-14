@@ -17,7 +17,6 @@ const RenderResult = ({ results }) => {
     }
     setDisplayModal(!displayModal);
   };
-
   return (
     <div id="results">
       <ResultsContainer id="result-container">

@@ -4,13 +4,14 @@ import Loader from "../Loader/Loader";
 import { FilterStyledContainer } from "./filterContainerStyles";
 import FilterCategory from "../FilterCategory/FilterCategory";
 import {resetFilterAction} from "../../redux/searchDuck"
+import {FilterButton} from "../FilterCategory/filterCategoryStyles"
 
 const FilterContainer = ({ filters, loading,resetFilterAction }) => {
   const renderEntity = () => {
     if (filters) {
       return (
         <div>
-          <button onClick={resetFilterAction}>Reset Filters</button>
+          <FilterButton onClick={resetFilterAction}>Reset Filters</FilterButton>
           <FilterCategory
             title={"Entity Filter"}
             values={filters.map((filter) => filter.category)}

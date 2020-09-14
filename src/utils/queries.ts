@@ -28,6 +28,7 @@ export const searchCharactersFunction = async (currentPage: number = 1, searchTe
       }
     }
   `
+    
     const result = await client.query({
         query,
         variables: { page: currentPage, name: searchTerm }

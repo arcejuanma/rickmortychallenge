@@ -23,7 +23,7 @@ const ResultArea = ({ filter, loading, errors }) => {
     loading.length > 0 || renderCharacters || renderEpisodes || renderLocations
       ? setRenderFilerContainer(true)
       : setRenderFilerContainer(false);
-  }, [filter, loading, errors]);
+  }, [filter, loading, errors, renderCharacters, renderEpisodes, renderLocations]);
 
   return (
     <ResultContainer>

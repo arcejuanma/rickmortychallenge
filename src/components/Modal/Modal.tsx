@@ -1,17 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ModalContainer, ModalContent, CloseButton, ModalCardContainer, ImageContainer } from "./modalStyles";
 import Card from "../Card/Card";
 import { ResultsContainer } from "../CategoryResults/categoryResultsStyles";
 
 const Modal = ({ ...props }) => {
   const [renderStringData, setRenderStringData] = useState(props.data[0] || []);
+  const [styleObject, setStyleObject] = useState({})
   const handleClose = (event: React.MouseEvent) => {
     event.preventDefault();
     props.handleClose(event);
   };
+  const renderType:string = props.data[0].__typename
+  const size = window.innerWidth
+
+  useEffect(()=>{
+    if(renderType==="Character" && size > 768){
+      setStyleObject({maxWidth:"30%"})
+    }
+  }, [renderType, size])
   return (
     <ModalContainer id="modal-container">
-      <ModalContent id="modal-content">
+      <ModalContent id="modal-content" style={styleObject}>
         <CloseButton onClick={handleClose}>&times;</CloseButton>
         {props.data[1] ? <img src={props.data[1]} alt={renderStringData.name}/> : ""}
         <h4><b>{renderStringData.name}</b></h4>

@@ -32,6 +32,11 @@ On the first version, this MVP includes the ability to:
 * Error handeling of results ("No Internet", "No results" and "Something went Wrong")
 * Spinner with configurable text while loading.
 
+### `Functionalities to Implement on Sprint 2`
+* Ability to select multiple filter characters.
+* UX Improvements (Show/Hide filters on Mobile).
+* Track and Fix performance issues.
+
 ### `Screens:`
 
 #### Home Screen:

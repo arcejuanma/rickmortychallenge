@@ -105,7 +105,6 @@ export const resetFilterAction = (): SearchActionTypes => {
     }
 }
 export const selectFilter = (filterArray: any[]) => (dispatch, getState) => {
-    console.log(filterArray)
     switch (filterArray[0]) {
         case "characters":
             let charactersArray = getState().search.charactersResults.filter(char => char[filterArray[1]] === filterArray[2])

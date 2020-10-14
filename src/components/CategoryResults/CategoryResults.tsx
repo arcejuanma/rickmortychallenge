@@ -4,6 +4,7 @@ import Loader from "../Loader/Loader";
 import Paginate from "../Paginator/Paginator";
 import { resultsPerPage } from "../../constants/search";
 import RenderResult from "./Result"
+import {CategoryContainer, CategoryTitleContainer, CategoryTitle} from "./categoryResultsStyles"
 
 
 const RenderResults = ({ category, results, error, loadingArray}) => {
@@ -38,11 +39,11 @@ const RenderResults = ({ category, results, error, loadingArray}) => {
   };
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <div style={{display:"flex", flexDirection:"row", alignItems: "center"}}>
-        <h4 style={{ textAlign: "center" , marginRight: "1%" }}>{category}</h4>
+    <CategoryContainer>
+      <CategoryTitleContainer>
+        <CategoryTitle>{category}</CategoryTitle>
         
-      </div>
+      </CategoryTitleContainer>
       {displayError ? (
         <h4>
           <b>{displayError}</b>
@@ -65,7 +66,7 @@ const RenderResults = ({ category, results, error, loadingArray}) => {
         />
 
       
-    </div>
+    </CategoryContainer>
   );
 };
 

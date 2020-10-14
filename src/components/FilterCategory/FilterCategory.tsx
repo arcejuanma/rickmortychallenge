@@ -5,7 +5,8 @@ import {selectFilter} from "../../redux/searchDuck"
 
 const FilterCategory = ({...props}) =>{
     const  handleFilterSelection = (event: React.MouseEvent<HTMLButtonElement>) =>{
-        props.selectFilter([props.entity, props.title, event.currentTarget.value ])
+        const {entity, title} = props;
+        props.selectFilter([entity, title, event.currentTarget.value ])
     }
     return(<div>
         <h4>{props.title}</h4>

@@ -23,3 +23,18 @@ margin: 1%;
     min-height: 20%
   }
 `
+export const CategoryContainer =styled.div`
+display: "flex";
+flex-direction: "column";
+`
+
+export const CategoryTitleContainer =styled.div`
+display:"flex";
+flex-direction:"row";
+align-items: "center";
+`
+
+export const CategoryTitle =styled.h4`
+text-align: "center";
+margin-right: "1%";
+`

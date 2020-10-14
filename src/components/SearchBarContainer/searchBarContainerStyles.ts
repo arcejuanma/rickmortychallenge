@@ -9,7 +9,7 @@ export const HeaderContainer = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 2px
+    padding: 2px;
 ` 
 
 
@@ -18,4 +18,7 @@ export const PageTitle = styled.h1`
     flex-grow: 1;
     text-align: left;
     margin-left: 10px;
+`
+export const StyledMargin = styled.div`
+    max-width: "5%";
 `

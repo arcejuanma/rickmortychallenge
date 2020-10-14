@@ -2,14 +2,15 @@ import React from "react";
 import SearchBarContainer from "../SearchBarContainer/SearchBarContainer";
 import ResultArea from "../ResultArea/ResultArea";
 import Footer from "../Footer/Footer";
+import {HomeResults, HomeFooter} from "./homeStyles"
 const Home = () => {
   return (
     <div>
       <SearchBarContainer />
-      <div style={{minHeight: "calc(100vh - 200px)"}}>
+      <HomeResults>
         <ResultArea />
-      </div>
-      <div style={{height:"60px"}}/>
+      </HomeResults>
+      <HomeFooter/>
       <Footer />
     </div>
   );
